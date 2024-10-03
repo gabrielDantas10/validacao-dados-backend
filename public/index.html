@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pré-Matrícula - Escola Virtual</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+        <form action="/submit" method="POST">
+            <div class="form-section">
+                <h3>Dados Pessoais:</h3>
+                <label for="nomeAluno">Nome do Aluno:</label>
+                <input type="text" id="nomeAluno" name="nomeAluno" required>
+
+                <label for="nascimento">Nascimento (dd/mm/aaaa):</label>
+                <input type="text" id="nascimento" name="nascimento" placeholder="dd/mm/aaaa" required>
+
+                <label for="nomeMae">Nome da Mãe:</label>
+                <input type="text" id="nomeMae" name="nomeMae" required>
+
+                <label for="nomePai">Nome do Pai:</label>
+                <input type="text" id="nomePai" name="nomePai" required>
+
+                <label for="telefone">Telefone: DDD</label>
+                <input type="text" id="ddd" name="ddd" maxlength="2" placeholder="DDD" required> 
+                <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-section">
+                <h3>Informações de Matrícula:</h3>
+                <label for="serie">Série:</label>
+                <select id="serie" name="serie" required>
+                    <option value="pre-escolar">Pré-escolar</option>
+                    <option value="fundamental1">Fundamental 1</option>
+                    <option value="fundamental2">Fundamental 2</option>
+                    <option value="medio">Médio</option>
+                </select>
+
+                <label>Turno:</label>
+                <label><input type="radio" name="turno" value="Manhã" required> Manhã</label>
+                <label><input type="radio" name="turno" value="Tarde" required> Tarde</label>
+            </div>
+
+            <div class="form-section">
+                <h3>Atividades Extracurriculares (máx. 3):</h3>
+                <label><input type="checkbox" name="atividades" value="Informatica"> Informática</label>
+                <label><input type="checkbox" name="atividades" value="Musica"> Música</label>
+                <label><input type="checkbox" name="atividades" value="Ballet"> Balé</label>
+                <label><input type="checkbox" name="atividades" value="Pintura"> Pintura</label>
+                <label><input type="checkbox" name="atividades" value="Judo"> Judô</label>
+                <label><input type="checkbox" name="atividades" value="Futebol"> Futebol</label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit">Enviar Formulário</button>
+                <button type="reset" class="btn-clear">Limpar Campos</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
